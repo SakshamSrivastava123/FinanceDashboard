@@ -1,6 +1,9 @@
 # Finance Dashboard
 
 A clean, interactive finance dashboard built with React. Tracks financial activity with a refined dark-luxury aesthetic.
+Finance Dashboard to help users track their income and expenses in a structured way. The main problem it solves is giving users a clear view of their financial activity, including where they are spending and how much they are earning.
+
+The application includes features like adding transactions, filtering by type such as income or expense, categorizing transactions like food, rent, or freelance, and sorting them by date. It also calculates totals and can be extended to show insights like category-wise spending.
 
 ---
 
