@@ -12,3 +12,8 @@ beforeAll(() => {
 test('renders LineChart without crashing', () => {
   render(<LineChart labels={['Jan', 'Feb']} data={[1000, 2000]} />);
 });
+
+test('handles empty labels and data', () => {
+  render(<LineChart labels={[]} data={[]} />);
+  expect(global.Chart).toHaveBeenCalled();
+});
