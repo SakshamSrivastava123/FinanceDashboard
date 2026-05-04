@@ -17,3 +17,14 @@ test('handles empty labels and data', () => {
   render(<LineChart labels={[]} data={[]} />);
   expect(global.Chart).toHaveBeenCalled();
 });
+
+test('does not crash if Chart is undefined', () => {
+  const originalChart = global.Chart;
+  global.Chart = undefined;
+
+  expect(() => {
+    render(<LineChart labels={['Jan']} data={[100]} />);
+  }).not.toThrow();
+
+  global.Chart = originalChart;
+});
