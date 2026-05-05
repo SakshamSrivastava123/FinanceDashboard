@@ -1,5 +1,5 @@
 import { useApp } from '../context/AppContext';
-
+import React from 'react';
 const NAV_ITEMS = [
   { id: 'dashboard',    label: 'Dashboard',     icon: '◈' },
   { id: 'transactions', label: 'Transactions',  icon: '⇄' },
