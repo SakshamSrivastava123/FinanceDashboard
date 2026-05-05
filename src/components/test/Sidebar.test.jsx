@@ -45,4 +45,13 @@ describe('Sidebar Component', () => {
     const activeButton = screen.getByText('Dashboard');
     expect(activeButton).toHaveStyle('background: var(--gold-dim)');
   });
+
+  // ✅ Click navigation
+  test('calls setPage when nav item is clicked', () => {
+    render(<Sidebar />);
+
+    fireEvent.click(screen.getByText('Transactions'));
+
+    expect(mockSetPage).toHaveBeenCalledWith('transactions');
+  });
 });
