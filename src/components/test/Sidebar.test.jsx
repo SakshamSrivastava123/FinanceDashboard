@@ -71,6 +71,15 @@ describe('Sidebar Component', () => {
     const overlay = document.querySelector('div[style*="position: fixed"]');
     expect(overlay).toBeInTheDocument();
   });
+ test('calls closeSidebar when overlay is clicked', () => {
+    render(<Sidebar />);
+
+    const overlay = document.querySelector('div[style*="position: fixed"]');
+
+    fireEvent.click(overlay);
+
+    expect(mockCloseSidebar).toHaveBeenCalled();
+  });
 
 
 });
