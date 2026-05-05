@@ -64,4 +64,13 @@ describe('Sidebar Component', () => {
 
     expect(mockSetRole).toHaveBeenCalledWith('admin');
   });
+
+   test('renders overlay when sidebar is open', () => {
+    render(<Sidebar />);
+
+    const overlay = document.querySelector('div[style*="position: fixed"]');
+    expect(overlay).toBeInTheDocument();
+  });
+
+
 });
