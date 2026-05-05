@@ -54,4 +54,14 @@ describe('Sidebar Component', () => {
 
     expect(mockSetPage).toHaveBeenCalledWith('transactions');
   });
+   // ✅ Role dropdown change
+  test('calls setRole when role is changed', () => {
+    render(<Sidebar />);
+
+    const dropdown = screen.getByRole('combobox');
+
+    fireEvent.change(dropdown, { target: { value: 'admin' } });
+
+    expect(mockSetRole).toHaveBeenCalledWith('admin');
+  });
 });
