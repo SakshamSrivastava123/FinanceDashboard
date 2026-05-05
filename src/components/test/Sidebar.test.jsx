@@ -38,5 +38,11 @@ describe('Sidebar Component', () => {
     expect(screen.getByText('Insights')).toBeInTheDocument();
   });
 
-  
+  // ✅ Active page styling
+  test('highlights active page', () => {
+    render(<Sidebar />);
+
+    const activeButton = screen.getByText('Dashboard');
+    expect(activeButton).toHaveStyle('background: var(--gold-dim)');
+  });
 });
